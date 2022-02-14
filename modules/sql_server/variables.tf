@@ -46,10 +46,6 @@ variable "databases" {
   default = []
 }
 
-variable "database_name" {
-  default = "bookstore"
-}
-
 variable "database_character" {
   default = "utf8"
 }
