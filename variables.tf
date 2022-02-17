@@ -14,6 +14,10 @@ variable "storage" {
   default = 50
 }
 
+variable "storage_type" {
+  default = "local_ssd"
+}
+
 variable "instance_type" {
   default = "mssql.x4.medium.s2"
 }

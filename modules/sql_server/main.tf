@@ -3,7 +3,7 @@ data "alicloud_db_instance_classes" "default" {
   engine         = var.engine
   engine_version = var.engine_version
   category       = "Basic"
-  storage_type   = "cloud_efficiency"
+  storage_type   = var.engine == "PostgreSQL" ? var.storage_type : null
 }
 
 resource "alicloud_db_instance" "instance" {
