@@ -1,3 +1,11 @@
+data "alicloud_db_instance_classes" "default" {
+  count          = var.engine == "PostgreSQL" ? 1 : 0
+  engine         = var.engine
+  engine_version = var.engine_version
+  category       = "Basic"
+  storage_type   = "cloud_efficiency"
+}
+
 resource "alicloud_db_instance" "instance" {
   engine           = var.engine
   engine_version   = var.engine_version
