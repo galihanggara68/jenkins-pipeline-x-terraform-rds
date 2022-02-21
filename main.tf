@@ -36,8 +36,11 @@ module "sql_server" {
   ###########
   #databases#
   ###########
+  create_database = var.create_database
+  create_account = var.create_account
   account_name = var.account_name 
   password     = var.password     
   privilege    = var.privilege    
   databases    = var.databases
+  database_character = var.database_character
 }
