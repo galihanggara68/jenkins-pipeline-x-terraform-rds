@@ -25,6 +25,7 @@ module "sql_server" {
   instance_name = var.instance_name 
   storage_type = var.storage_type
   storage = var.storage
+  port = var.port
   #################
   # Rds Backup policy
   #################

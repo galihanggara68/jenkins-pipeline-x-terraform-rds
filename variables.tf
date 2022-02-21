@@ -10,6 +10,10 @@ variable "engine_version" {
   # default = "2016_std_ha"
 }
 
+variable "port" {
+  # default = 3306
+}
+
 variable "storage" {
   # default = 50
 }

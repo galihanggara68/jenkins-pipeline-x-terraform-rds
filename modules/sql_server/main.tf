@@ -11,7 +11,7 @@ resource "alicloud_db_instance" "instance" {
   engine_version   = var.engine_version
   instance_name    = var.instance_name
   instance_type    = var.engine == "PostgreSQL" ? data.alicloud_db_instance_classes.default.0.instance_classes.0.instance_class : var.instance_type
-  # instance_type    = var.instance_type
+  port = var.port
   instance_storage = var.storage
   db_instance_storage_type = var.engine == "PostgreSQL" ? var.storage_type : null
   vswitch_id       = var.vswitch_id
