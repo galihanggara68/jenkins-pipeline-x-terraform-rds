@@ -2,13 +2,13 @@ terraform {
   required_version = "1.1.5"
 }
 
-data "terraform_remote_state" "vpc" {
-  backend = "local"
+# data "terraform_remote_state" "vpc" {
+#   backend = "local"
 
-  config = {
-    path = var.remote_state_path
-  }
-}
+#   config = {
+#     path = var.remote_state_path
+#   }
+# }
 
 module "sql_server" {
   source  = "./modules/sql_server"
@@ -20,9 +20,11 @@ module "sql_server" {
   #################
   # Rds Instance
   #################
-  vswitch_id    = data.terraform_remote_state.vpc.outputs.this_vswitch_ids[0][0]
+  vswitch_id    = var.vswitch_id
   instance_type = var.instance_type 
   instance_name = var.instance_name 
+  storage_type = var.storage_type
+  storage = var.storage
   #################
   # Rds Backup policy
   #################
