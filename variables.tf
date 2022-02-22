@@ -1,6 +1,6 @@
-# variable "remote_state_path" {
-#   # default = ""
-# }
+variable "remote_state_path" {
+  # default = ""
+}
 
 variable "engine" {
   # default = "SQLServer"
