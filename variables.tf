@@ -64,7 +64,7 @@ variable "database_character" {
 
 variable "vswitch_id" {
   description = "The vpc id used to launch vswitch, security group and instance."
-  # default     = -1
+  default     = -1
 }
 
 variable "preferred_backup_period" {
