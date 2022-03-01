@@ -21,6 +21,7 @@ module "sql_server" {
   # Rds Instance
   #################
   vswitch_id    = data.terraform_remote_state.vpc.outputs.this_vswitch_ids[0][0]
+  resource_group_id = data.terraform_remote_state.vpc.outputs.this_resource_group_id[0]
   instance_type = var.instance_type 
   instance_name = var.instance_name 
   storage_type = var.storage_type

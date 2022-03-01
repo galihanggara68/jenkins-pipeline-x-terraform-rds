@@ -7,6 +7,7 @@ data "alicloud_db_instance_classes" "default" {
 }
 
 resource "alicloud_db_instance" "instance" {
+  resource_group_id = var.resource_group_id
   engine           = var.engine
   engine_version   = var.engine_version
   instance_name    = var.instance_name

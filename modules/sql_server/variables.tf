@@ -6,6 +6,10 @@ variable "engine_version" {
   # default = "2016_std_ha"
 }
 
+variable "resource_group_id" {
+  # default = "2016_std_ha"
+}
+
 variable "port" {
   # default = 3306
 }
